@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Negoiate your Salary!</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Negoiate your Salary!">
+  <meta name="author" content="Ed Song">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Negoiate your Salary!</h1>
+    <h2>Data Products Project</h2>
+    <p>Ed Song<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Why you should negoiate your salary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Employers want to pay you as little as possible</li>
+<li>You want to get paid as much as possible</li>
+<li>Volunteering is free. For work you must get...PAID!!!</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Major factors to consider when Negotiating</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Current Salary</li>
+<li>How much of an increase would you like</li>
+<li>How much time will you spend getting to work</li>
+<li>Will there be work from home</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Calculate your new base salary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Basic Example:</p>
+
+<pre><code class="r">Current_salary = 50000
+raise = .15 #15%
+
+New_salary &lt;- Current_salary * (1 + raise)
+
+New_salary
+</code></pre>
+
+<pre><code>## [1] 57500
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <article data-timings="">
+    <p>Calculate your function salary</p>
+
+<p>Accounting for commute:</p>
+
+<pre><code class="r">Current_salary = 50000
+raise = .15 #15%
+New_salary &lt;- Current_salary * (1 + raise)
+
+old_commute = 20 #minutes
+new_commute = 80 #minutes
+old_commute_days_a_week = 5
+new_commute_days_a_week = 4
+
+old_rate &lt;- Current_salary /(2080+(old_commute/60*old_commute_days_a_week*52))
+new_rate &lt;- New_salary / (2080+(new_commute/60*new_commute_days_a_week*52))
+
+Functional_new_salary &lt;- Current_salary+(Current_salary)*((new_rate-old_rate)/old_rate)
+
+Functional_new_salary
+</code></pre>
+
+<pre><code>## [1] 52849.26
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <article data-timings="">
+    <p>What did we learn:</p>
+
+<ol>
+<li>Negotiate based on functional salary the base salary.</li>
+<li>Your mental anguish in transit needs to be considered.</li>
+<li>Make sure to take it easy its only work.</li>
+</ol>
+
+<p>All calculations assume work life balance and that there is really is a 40 hour work week.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Why you should negoiate your salary'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Major factors to consider when Negotiating'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Calculate your new base salary'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='NA'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='NA'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
